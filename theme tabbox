@@ -119,14 +119,14 @@ local ThemeManager = {} do
 		self:BuildFolderTree()
 	end
 
-	function ThemeManager:CreateTabBox(tab)
+	function ThemeManager:CreateGroupBox(tab)
 		assert(self.Library, 'Must set ThemeManager.Library first!')
 		return tab:AddLeftTabbox('Themes')
 	end
 
 	function ThemeManager:ApplyToTab(tab)
 		assert(self.Library, 'Must set ThemeManager.Library first!')
-		local groupbox = self:CreateTabBox(tab)
+		local groupbox = self:CreateGroupBox(tab)
 		self:CreateThemeManager(groupbox)
 	end
 
